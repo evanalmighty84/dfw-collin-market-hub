@@ -10,27 +10,26 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
+// ... imports
+
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <HelmetProvider>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            {/* Future routes will go here */}
-            {/* <Route path="/search" element={<Search />} /> */}
-            {/* <Route path="/resources" element={<Resources />} /> */}
-            {/* <Route path="/contact" element={<Contact />} /> */}
-            {/* <Route path="/property/:id" element={<PropertyDetail />} /> */}
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
-      </TooltipProvider>
-    </HelmetProvider>
-  </QueryClientProvider>
+    <QueryClientProvider client={queryClient}>
+      <HelmetProvider>
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter basename="/dfw-collin-market-hub/">
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </BrowserRouter>
+        </TooltipProvider>
+      </HelmetProvider>
+    </QueryClientProvider>
 );
+
+export default App;
+
 
 export default App;
