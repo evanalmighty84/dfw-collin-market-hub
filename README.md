@@ -2,6 +2,8 @@
 
 ## Project info
 
+Terri Pesacatore
+
 **URL**: https://lovable.dev/projects/ca4dc9f2-cf3a-4a24-86e3-0129699fa268
 
 ## How can I edit this code?
